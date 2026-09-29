@@ -2,6 +2,7 @@
 
 ### Courtyard Prototype
 
+### Instructions to Run the Game ###
 Open `hello-world.html` in a desktop browser, or use the VS Code Live Server extension.
 For a local server without extensions, run `python -m http.server 8000` from this folder,
 then visit `http://localhost:8000/hello-world.html`.
