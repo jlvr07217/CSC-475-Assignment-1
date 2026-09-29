@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+#mission-subtitle { position: fixed; left: 50%; bottom: 170px; transform: translateX(-50%); width: min(650px, 85vw); padding: 15px 22px; background: #14252bef; border-left: 3px solid #edb66b; pointer-events: none; line-height: 1.6; }
+#mission-subtitle[hidden] { display: none; }
+#mission-complete { z-index: 10; }
+#resume-dialogue { position: fixed; z-index: 5; left: 50%; top: 60%; transform: translateX(-50%); }
+#resume-dialogue[hidden] { display: none; }
+#talk-prompt { position: fixed; left: 50%; top: 60%; transform: translateX(-50%); padding: 12px 20px; background: #15242bed; border: 1px solid #90b6b9; pointer-events: none; }
+#npc-dialogue { position: fixed; z-index: 5; left: 50%; bottom: 7vh; transform: translateX(-50%); width: min(620px, 92vw); max-height: 85vh; overflow: auto; background: #14252bf5; border: 1px solid #657c7d; padding: 26px; box-shadow: 0 12px 50px #0008; }
+#npc-dialogue[hidden], #talk-prompt[hidden] { display: none; }
+#npc-dialogue h2 { margin: 10px 0; } #npc-speech { line-height: 1.7; min-height: 55px; }
+#npc-choices { display: grid; gap: 8px; margin-bottom: 16px; }
+#npc-choices button { text-align: left; margin: 0; padding: 12px; }
+#npc-dialogue small { color: #bed0d1; }
+.weapon-hud { display: none; position: fixed; right: 34px; bottom: 80px; text-align: right; pointer-events: none; color: #edf3ef; text-shadow: 0 2px 5px #142329; }
+body.playing .weapon-hud { display: grid; gap: 7px; }
+.weapon-hud strong { font-size: 28px; } .weapon-hud span, .weapon-hud small { font-size: 10px; letter-spacing: 1px; }
+body.playing.aiming #crosshair { display: none; }
+#preview-motion { padding: 8px 12px; background: #293f49; color: #edf3ef; border: 1px solid #90b6b9; font: inherit; }
+.inspect { position: absolute; right: 34px; bottom: 65px; }
+#model-ui { position: fixed; inset: auto 34px 65px; z-index: 4; display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+#model-ui[hidden] { display: none; }
+#model-ui strong { letter-spacing: 3px; } #model-ui p { font-size: 12px; color: #bed0d1; }
+body.inspecting .location, body.inspecting footer { display: none; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #15242b; color: #edf3ef; font-family: 'Segoe UI', Arial, sans-serif; }
+#game { width: 100%; height: 100%; display: block; outline: none; touch-action: none; }
+.hud, footer, .location { position: fixed; pointer-events: none; z-index: 2; text-shadow: 0 2px 8px #142329; }
+.hud { top: 28px; left: 34px; right: 34px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: 800; letter-spacing: 5px; font-size: 22px; }
+.brand span { font-size: 11px; font-weight: 500; letter-spacing: 3px; color: #c4d7d8; }
+.status { font-size: 10px; letter-spacing: 2px; }
+.status i { display: inline-block; width: 6px; height: 6px; margin-right: 8px; background: #88e4db; border-radius: 50%; }
+.location { bottom: 80px; left: 34px; border-left: 2px solid #edb66b; padding-left: 15px; }
+.location span { font-size: 9px; letter-spacing: 3px; color: #d7e4df; }
+.location strong { display: block; font-size: 18px; margin-top: 7px; font-weight: 500; }
+.location p { font-size: 12px; color: #ccdcde; margin-bottom: 0; }
+footer { bottom: 24px; left: 34px; right: 34px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 1px; }
+footer b { font-weight: 400; color: #bdd0d1; }
+#crosshair { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; transform: translate(-50%, -50%); background: #fff; border-radius: 50%; box-shadow: 0 0 3px #000; display: none; }
+body.playing #crosshair { display: block; }
+.overlay { position: fixed; inset: 0; z-index: 3; display: flex; align-items: center; background: linear-gradient(90deg, rgba(12,25,32,.96), rgba(12,25,32,.73) 38%, rgba(12,25,32,.12)); }
+.overlay[hidden] { display: none; }
+.panel { margin-left: 9vw; max-width: 400px; padding: 24px; }
+.eyebrow { color: #e6b273; font-size: 11px; letter-spacing: 4px; }
+h1 { font-size: clamp(48px, 7vw, 88px); line-height: .96; letter-spacing: 5px; margin: 24px 0; }
+h1 span { display: block; color: #90b6b9; font-weight: 300; font-size: .52em; letter-spacing: 10px; margin-top: 12px; }
+.panel p { color: #bed0d1; font-size: 14px; line-height: 1.8; }
+.rule { width: 50px; height: 2px; background: #e6b273; margin: 26px 0; }
+.panel .instructions { font-size: 12px; }
+button { background: #edb66b; border: none; color: #1c2d32; padding: 16px 28px; margin-top: 12px; font: 700 12px 'Segoe UI', sans-serif; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; }
+button:hover { background: #ffd199; } button:focus-visible { outline: 3px solid white; outline-offset: 4px; } button:disabled { opacity: .5; cursor: wait; }
+#message { font-size: 11px; max-width: 330px; }
+.build { position: absolute; bottom: 25px; right: 34px; font-size: 9px; letter-spacing: 2px; color: #bed0d1; }
+@media (max-width: 650px) { .status, .brand span, #bearing { display: none; } .panel { margin-left: 3vw; } footer { font-size: 8px; left: 20px; } .hud, .location { left: 20px; } }

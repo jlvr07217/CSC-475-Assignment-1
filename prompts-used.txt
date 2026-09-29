@@ -1,0 +1,83 @@
+CSC 475 Assignment 1 - Prompts Used
+
+1. If you look in the readme.md file you will see my assignment instructions that I have copied down. What kind of game could we realisitically code up before the deadline (Sept 29 11:59 PM)? Can it be done in VS code? I am thinking of creating is a single level of an FPS game. The game will be played in browser. Player will direct an NPC to hand another NPC an item. That will be the gameplay loop.
+
+2. Is it realistic to have the single COD BOII-like level done within 10 days?
+
+3. How long will this take to build if I ask you to build it (DO NOT START BUILDING UNTIL I SAY SO)
+
+4. What should we start with?
+
+5. When I give you the signal, build a A flat 3D courtyard with basic walls. Try to give it a semi futuristic semi modern aesthetic like bo2. Try not to make the graphics too extreme. Keeping it cartoony and blocky is totally fine - that would be a nightmare to render, right?
+
+6. Start building it
+
+7. Ok how do I run this?
+
+8. It says the site cant be reached
+
+9. Fantastic job!
+
+10. So is the locahost server active?
+
+11. So what deactivates the server?
+
+12. What if I close the tab it was running on?
+
+13. Ok what if I close VS code?
+
+14. Activate the server
+
+15. Server status?
+
+16. Does that mean its inactive?
+
+17. Ok and all I have to do is run the command to turn it on?
+
+18. Are you able to make a player character model using an image from the internet as a reference?
+
+19. Using the character in this image as a reference, can you create the player model? Remember, it can be blocky and cartoony.
+[Attached reference image: soldier with dark hair, sunglasses, and tactical gear.]
+
+20. Activate the server for a test
+
+21. Field test successful. Deactivate the server
+
+22. Ok now lets try to add a weapon for the player model. I am thinking of doing the M8A1 from Black ops II. Our goal currently is to make sure the player model can hold the weapon correctly. The first person view should look like this image when holding the weapon.
+[Attached reference image: first-person rifle and supporting hand.]
+
+23. Activate the server for a test
+
+24. Field test successful. Deactivate the server
+
+25. Ok can we animate the walking and sprinting?
+
+26. Turn on the server for a test
+
+27. Turn off server
+
+28. Ok lets add firing and reloading to the game. You will fire your gun by left clicking, reload by pressing 'R', and aim down sights by right clicking
+
+29. Turn on the server for a field test
+
+30. Turn off the server, everything works. Just checking did you make the fire mode burst fire?
+
+31. Alright lets try to add an NPC using this character model. It can be blocky and cartoony. We want to be able to talk to the NPC
+[Attached reference image: helmeted soldier with a covered face and gray tactical gear.]
+
+32. Lets do a field test. Activate the server
+
+33. It was sucessful but when you hit goodbye or esc, it activates the pause menu. Lets try to get it to where we can exit the conversation without triggering the pause menu
+
+34. Field test success
+
+35. Now how do you suggest we satisfy the project's requirement of npcs interacting with each other based on Corporal Vale's dialogue?
+
+36. Lets use this character for the engineer and add the proposed changes on my mark. And this time we can call command for extraction. To avoid making the project too complex, we will just have the mission end after command's dialog ends, sound good?
+[Attached reference image: soldier with a cap, headset, visible face, and gray tactical gear.]
+
+37. Go
+
+38. Test successful
+
+39. Put the prompts I used onto a txt file

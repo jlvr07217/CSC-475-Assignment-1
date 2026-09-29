@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relay / Outpost 07</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/babylonjs@8.26.0/babylon.js"></script>
+  <script defer src="weapon-model.js"></script>
+  <script defer src="player-model.js"></script>
+  <script defer src="weapon-controls.js"></script>
+  <script defer src="npc.js"></script>
+  <script defer src="courtyard.js"></script>
+</head>
+<body>
+  <canvas id="game" aria-label="First-person 3D military courtyard"></canvas>
+  <header class="hud"><div class="brand">RELAY <span>/ OUTPOST 07</span></div><div class="status"><i></i> ENVIRONMENT PREVIEW</div></header>
+  <div id="crosshair" aria-hidden="true"></div>
+  <div id="mission-subtitle" role="status" hidden></div>
+  <section id="mission-complete" class="overlay" hidden><div class="panel"><div class="eyebrow">EXTRACTION APPROVED</div><h1>MISSION<span>COMPLETE</span></h1><p>Battery delivered. Communications restored.<br>Command has cleared your team to return to base.</p><button id="restart-mission">Play again</button></div></section>
+  <div id="talk-prompt" hidden>E · Talk to Corporal Vale</div>
+  <button id="resume-dialogue" hidden>Click to resume looking around</button>
+  <section id="npc-dialogue" role="dialog" aria-modal="true" aria-labelledby="npc-name" hidden><div class="eyebrow">OUTPOST SECURITY</div><h2 id="npc-name">Corporal Vale</h2><p id="npc-speech" aria-live="polite"></p><div id="npc-choices"></div><small>Esc to leave conversation</small></section>
+  <aside class="weapon-hud"><strong id="ammo">32 / 32</strong><span id="weapon-status">4-ROUND BURST · R RELOAD</span><small>LEFT CLICK FIRE · HOLD RIGHT CLICK AIM</small></aside>
+  <aside class="location"><span>SECTOR 07 · EXTERIOR</span><strong>Communications courtyard</strong><p>Explore the outpost.</p></aside>
+  <footer><span>WASD <b>MOVE</b> &nbsp; MOUSE <b>LOOK</b> &nbsp; SHIFT <b>SPRINT</b> &nbsp; ESC <b>PAUSE</b></span><span id="bearing">N / 000°</span></footer>
+  <section id="menu" class="overlay">
+    <div class="panel"><div class="eyebrow">FIELD STATION / 07</div><h1>RELAY<span>OUTPOST</span></h1><p>A quiet communications station on the edge of tomorrow.</p><div class="rule"></div><p class="instructions">Explore a stylized 3D courtyard.<br>WASD to move · Mouse to look · Shift to sprint</p><button id="enter" disabled>Loading courtyard…</button><p id="message" role="status">Preparing the environment.</p></div>
+    <button id="inspect" class="inspect" disabled>Inspect player model</button>
+    <span class="build">CSC 475 / COURTYARD PROTOTYPE 01</span>
+  </section>
+  <section id="model-ui" hidden><div><strong>FIELD OPERATOR / 07</strong><p>Drag to rotate · Scroll to zoom</p><label for="preview-motion">Animation </label><select id="preview-motion"><option value="idle">Idle</option><option value="walk">Walk</option><option value="sprint">Sprint</option></select></div><button id="close-model">Back to courtyard</button></section>
+</body>
+</html>
